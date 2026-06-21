@@ -1,6 +1,6 @@
 :root {
-    --bg-color: hsl(30 38% 92%);
-    --card-bg-color: hsl(0 0% 100%);
+    --clr-bg: hsl(30 38% 92%);
+    --clr-card-bg: hsl(0 0% 100%);
     --clr-grey: hsl(228 12% 48%);
     --clr-black: hsl(212 21% 14%);
     --clr-green-500: hsl(158 36% 37%);
@@ -16,7 +16,8 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--clr-bg);
+    font-family: var(--font-montserrat);
 }
 
 main {
@@ -33,7 +34,7 @@ main {
     width: 100%;
     max-width: 21.875rem;
     border-radius: .5rem;
-    background-color: var(--card-bg-color);
+    background-color: var(--clr-card-bg);
 }
 
 
@@ -51,7 +52,6 @@ main {
 }
 
 .product-type {
-    font-family: var(--font-montserrat);
     font-size: .75rem;
     font-weight: 400;
     line-height: 1.2;
@@ -76,7 +76,6 @@ main {
 
 .product-description {
     color: var(--clr-grey);
-    font-family: var(--font-montserrat);
     font-weight: 500;
     font-size: .875rem;
     line-height: 1.6;
@@ -99,12 +98,9 @@ main {
 
 .product-price del {
     color: var(--clr-grey);
-    font-family: var(--font-montserrat);
     font-weight: 500;
     font-size: .8125rem;
     line-height: 1.2;
-
-
 }
 
 .add-to-cart-btn {
@@ -117,7 +113,6 @@ main {
     padding: 1rem 2rem;
     border: none;
     border-radius: .5rem;
-    font-family: var(--font-montserrat);
     line-height: 1.1;
     font-size: .875rem;
     font-weight: 700;
@@ -129,8 +124,8 @@ main {
 }
 
 .cart-icon {
-    height: 15.75px;
-    width: 15.75px;
+    height: 16px;
+    width: 16px;
 }
 
 @media (min-width: 600px) {
@@ -142,20 +137,23 @@ main {
     }
 
     .image-wrapper {
-        flex: 1;
+        width: 50%;
+        display: flex;
+       
     }
 
     .product-info {
-        flex: 1;
+        width: 50%;
         gap: 2rem;
+
     }
 
     .product-image {
-
+        width: 100%;
         height: 100%;
         border-top-left-radius: .5rem;
         border-top-right-radius: 0;
         border-bottom-left-radius: .5rem;
-        object-fit: cover;
+       
     }
 }
