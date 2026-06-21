@@ -29,8 +29,8 @@ main {
 }
 
 .product-card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     width: 100%;
     max-width: 21.875rem;
     border-radius: .5rem;
@@ -68,7 +68,7 @@ main {
 
 .product-name {
     font-family: var(--font-fraunces);
-    font-weight: bold;
+    font-weight: 700;
     font-size: 2rem;
     line-height: 1;
     color: var(--clr-black);
@@ -128,22 +128,19 @@ main {
     width: 16px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
     .product-card{
-        display: flex;
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
         max-width: 37.5rem;
    
     }
 
     .image-wrapper {
-        width: 50%;
         display: flex;
        
     }
 
     .product-info {
-        width: 50%;
         gap: 2rem;
 
     }
